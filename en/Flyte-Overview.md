@@ -22,7 +22,22 @@ ability to train models 200× larger^1.
 
 > Reference here: https://eng.lyft.com/introducing-flyte-cloud-native-machine-learning-and-data-processing-platform-fb2bb3046a59
 
+- Skip for now and try to finish following first :P
+
 - List things out in bullet point with simple description
 
 
-## What can Flyte Do?
+## Flyte Features 
+
+- Input/output caching
+- workflow versioning
+- Decoupled control plane (FlyteAdmin) and data plane (FlytePropeller)
+    - This allows users to register their workflows once against a single control plane
+    and execute them across any clusters
+    - keep data in on-prem cluster
+- Migrate nodes (Disruption readiness)
+    - Disrupted jobs exit with a special error code, prompting Flyte to retry the job on a new set of nodes
+    - Also start from checkpoint?? -> check
+- Connect other services through "Agent"
+    - E.g. Enable dispatch workflows to platforms like Databricks
+    - User can build their own agent easily with Python
