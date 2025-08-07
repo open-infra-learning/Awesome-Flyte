@@ -18,6 +18,16 @@ ability to train models 200× larger^1.
 
 [1] https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem
 
+> 我們可能需要一個快速的 overview 說 Flyte 怎麼用? 還不確定要放哪
+
+The most basic use case of Flyte is to create the workflow (a DAG) containing multiple
+tasks with simple Python syntax (see below). Then we can run the workflow in cluster Pod
+with `pyflyte run --remote task.py wf`. You can then see the pod is created for executing
+tasks, and status is updated to the Flyte console, which is the dashboard. How simple it
+is!
+
+(Put the code/screenshot here)
+
 ## Challenges in Previous ML Orchestration Platforms
 
 > Reference here: https://eng.lyft.com/introducing-flyte-cloud-native-machine-learning-and-data-processing-platform-fb2bb3046a59
@@ -29,12 +39,24 @@ ability to train models 200× larger^1.
 
 ## Flyte Features 
 
-- Input/output caching
+This section describe some highlight Flyte features. We will have more articles diving
+into more details in each topic and we will do the brief overview in this article.
+
+- Output caching
+    - Flyte will cache the output for a task. If we later running the same task with same
+    input, it will trigger cache hit and directly use the output from the cache rather
+    than re-running the whole things.
 - workflow versioning
+    - Workflow in Flyte is versioned with all tasks as immutable. We can run differnet
+    workflow versions with totally different structure simultaneously. Also, even if we
+    change some tasks in the workflow, we can still leverage the cache for the unchanged
+    task as long as its input is the same.
 - Decoupled control plane (FlyteAdmin) and data plane (FlytePropeller)
-    - This allows users to register their workflows once against a single control plane
-    and execute them across any clusters
-    - keep data in on-prem cluster
+    - Flyte control plane and data plane are natively decoupled, this allows users to
+    register their workflow through a single control plane and execute them on multiple
+    different clusters.
+    - (Put image from LinkedIn Engineering blog [Figure 8: Flyte multi-region routing
+    setup])
 - Migrate nodes (Disruption readiness)
     - Disrupted jobs exit with a special error code, prompting Flyte to retry the job on a new set of nodes
     - Also start from checkpoint?? -> check
