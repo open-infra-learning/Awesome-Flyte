@@ -39,8 +39,8 @@ is!
 
 ## Flyte Features 
 
-This section describe some highlight Flyte features. We will have more articles diving
-into more details in each topic and we will do the brief overview in this article.
+This section highlights key Flyte features with brief overviews. Detailed articles
+covering each topic will be published in future articles.
 
 - Output Caching
     - Flyte automatically saves task results. When the same task runs again with identical
