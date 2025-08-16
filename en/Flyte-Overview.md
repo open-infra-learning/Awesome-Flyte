@@ -42,27 +42,24 @@ is!
 This section describe some highlight Flyte features. We will have more articles diving
 into more details in each topic and we will do the brief overview in this article.
 
-- Output caching
-    - Flyte will cache the output for a task. If we later running the same task with same
-    input, it will trigger cache hit and directly use the output from the cache rather
-    than re-running the whole things.
-- workflow versioning
-    - Workflow in Flyte is versioned with all tasks as immutable. We can run differnet
-    workflow versions with totally different structure simultaneously. Also, even if we
-    change some tasks in the workflow, we can still leverage the cache for the unchanged
-    task as long as its input is the same.
-- Decoupled control plane (FlyteAdmin) and data plane (FlytePropeller)
-    - Flyte control plane and data plane are natively decoupled, this allows users to
-    register their workflow through a single control plane and execute them on multiple
-    different clusters.
+- Output Caching
+    - Flyte automatically saves task results. When the same task runs again with identical
+    inputs, Flyte reuses the cached output instead of re-executing the task, saving time
+    and compute resources.
+- Workflow Versioning
+    - Flyte creates immutable versions of workflows, allowing different versions to run
+    simultaneously without conflicts. When updating workflows, unchanged tasks can still
+    reuse their cached results, avoiding unnecessary re-execution.
+- Multi-Cluster Management
+    - Flyte separates workflow management from execution, allowing you to define workflows once in a central location and run them across
+  multiple compute clusters as needed.
     - (Put image from LinkedIn Engineering blog [Figure 8: Flyte multi-region routing
     setup])
-- Node Migration
-    - In production multi-node environments, nodes may fail or require maintenance. Flyte
-    automatically retries tasks on healthy nodes when disruptions occur. With
-    checkpointing enabled, tasks resume from their last checkpoint rather than restarting
-    completely.
-- External Service Integration via Agents
-    - Flyte Agents enable integration with external compute services like Databricks,
-    Snowflake, and AWS Batch. Users can execute tasks on these external platforms while
-    maintaining Flyte's workflow orchestration, monitoring, and retry capabilities.
+- Automatic Recovery
+    - When servers fail or need maintenance, Flyte automatically moves tasks to working
+    machines. Tasks can resume from where they left off instead of starting over,
+    minimizing lost work.
+- Connect External Services
+    - Flyte can run tasks on popular data platforms like Databricks, Snowflake, and AWS
+    Batch while still providing centralized workflow management, monitoring, and error
+    handling.
