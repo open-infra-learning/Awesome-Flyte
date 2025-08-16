@@ -57,9 +57,12 @@ into more details in each topic and we will do the brief overview in this articl
     different clusters.
     - (Put image from LinkedIn Engineering blog [Figure 8: Flyte multi-region routing
     setup])
-- Migrate nodes (Disruption readiness)
-    - Disrupted jobs exit with a special error code, prompting Flyte to retry the job on a new set of nodes
-    - Also start from checkpoint?? -> check
-- Connect other services through "Agent"
-    - E.g. Enable dispatch workflows to platforms like Databricks
-    - User can build their own agent easily with Python
+- Node Migration
+    - In production multi-node environments, nodes may fail or require maintenance. Flyte
+    automatically retries tasks on healthy nodes when disruptions occur. With
+    checkpointing enabled, tasks resume from their last checkpoint rather than restarting
+    completely.
+- External Service Integration via Agents
+    - Flyte Agents enable integration with external compute services like Databricks,
+    Snowflake, and AWS Batch. Users can execute tasks on these external platforms while
+    maintaining Flyte's workflow orchestration, monitoring, and retry capabilities.
