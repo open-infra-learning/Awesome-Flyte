@@ -18,6 +18,8 @@ ability to train models 200× larger^1.
 
 [1] https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem
 
+## How to Run Workflow in Flyte?
+
 > 我們可能需要一個快速的 overview 說 Flyte 怎麼用? 還不確定要放哪
 
 The most basic use case of Flyte is to create the workflow (a DAG) containing multiple
@@ -27,6 +29,12 @@ tasks, and status is updated to the Flyte console, which is the dashboard. How s
 is!
 
 (Put the code/screenshot here)
+
+By running the workflow, we can access the Flyte console with the URL printed in the
+terminal. Flyte console is an UI interface for monitoring the workflow status, loggings,
+and do other operations like retrying.
+
+(Put the Flyte console image here)
 
 ## Challenges in Previous ML Orchestration Platforms
 
