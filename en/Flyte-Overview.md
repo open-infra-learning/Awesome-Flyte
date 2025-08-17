@@ -57,8 +57,6 @@ covering each topic will be published in future articles.
 
 ## How to Run Workflow in Flyte?
 
-> 我們可能需要一個快速的 overview 說 Flyte 怎麼用? 還不確定要放哪
-
 The Flyte workflow can be defined through simple Python syntax that is similar to other
 workflow orchastration tools.
 
