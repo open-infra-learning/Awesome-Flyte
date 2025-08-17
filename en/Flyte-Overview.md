@@ -1,18 +1,20 @@
 # Introduction to Flyte
 
 
-[Background] Since the term *big data* first introduced in the early 1990s, the volume of global data has grown at an exponential pace. As machine learning continues to rise, companies are building countless AI pipelines to solve real-world business problems, from predicting ad clicks to personalizing recommendations.
+Since the term *big data* first introduced in the early 1990s, the volume of global data has grown at an exponential pace. As machine learning continues to rise, companies are building countless AI pipelines to solve real-world business problems, from predicting ad clicks to personalizing recommendations.
 
-[Formulation] At its core, an AI pipeline can be thought of as:
+At its core, an AI pipeline can be thought of as:
 
-AI Pipeline = Code + Data [1]
+$$
+\text{AI Pipeline = Code + Data [1]}
+$$
 
-[Challenges] But in practice, building and managing these pipelines is far from simple. Developers often face two major challenges:
+But in practice, building and managing these pipelines is far from simple. Developers often face two major challenges:
 
 1. **Data flow.** Ensure data moves smoothly across a complex workflow of preprocessing, model training, serving, and evaluation.
 2. **Deployment.** Ship code reliably into production without endless manual fixes.
 
-[Solution] To address these pain points, Lyft created Flyte [2], an open-source orchestration platform designed to support tens of thousands of AI pipelines at scale.
+To address these pain points, Lyft created Flyte [2], an open-source orchestration platform designed to support tens of thousands of AI pipelines at scale.
 
 Flyte tackles five specific challenges that AI teams commonly face:
 
