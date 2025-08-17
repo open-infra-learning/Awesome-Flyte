@@ -59,17 +59,18 @@ covering each topic will be published in future articles.
 
 > 我們可能需要一個快速的 overview 說 Flyte 怎麼用? 還不確定要放哪
 
-The most basic use case of Flyte is to create the workflow (a DAG) containing multiple
-tasks with simple Python syntax (see below). Then we can run the workflow in cluster Pod
-with `pyflyte run --remote task.py wf`. You can then see the pod is created for executing
-tasks, and status is updated to the Flyte console, which is the dashboard. How simple it
-is!
+The Flyte workflow can be defined through simple Python syntax that is similar to other
+workflow orchastration tools.
 
 (Put the code/screenshot here)
 
-By running the workflow, we can access the Flyte console with the URL printed in the
-terminal. Flyte console is an UI interface for monitoring the workflow status, loggings,
-and do other operations like retrying.
+After defining the workflow, we can either executing it locally by `pyflyte run task.py
+wf` for debugging locally or running on remote with `pyflyte run --remote task.py wf`.
+When running on remote, Flyte automatically creates Kubernetes pods to execute tasks and
+provides real-time status updates.
+
+The command prints a URL to access Flyte Console, a web dashboard for monitoring workflow
+progress, viewing logs, and managing operations like retries.
 
 (Put the Flyte console image here)
 
