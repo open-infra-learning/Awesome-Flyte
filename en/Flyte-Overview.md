@@ -32,27 +32,23 @@ Today, Flyte is trusted by leading companies such as Tesla, Spotify, LinkedIn, a
 This section highlights key Flyte features with brief overviews. Detailed articles
 covering each topic will be published in future articles.
 
-- Output Caching
-    - Flyte automatically saves task results. When the same task runs again with identical
-    inputs, Flyte reuses the cached output instead of re-executing the task, saving time
-    and compute resources.
-- Workflow Versioning
-    - Flyte creates immutable versions of workflows, allowing different versions to run
-    simultaneously without conflicts. When updating workflows, unchanged tasks can still
-    reuse their cached results, avoiding unnecessary re-execution.
-- Multi-Cluster Management
-    - Flyte separates workflow management from execution, allowing you to define workflows once in a central location and run them across
-  multiple compute clusters as needed.
+- **Output Caching** - Flyte automatically saves task results. When the same task runs
+again with identical inputs, Flyte reuses the cached output instead of re-executing the
+task, saving time and compute resources.
+- **Workflow Versioning** - Flyte creates immutable versions of workflows, allowing
+different versions to run simultaneously without conflicts. When updating workflows,
+unchanged tasks can still reuse their cached results, avoiding unnecessary re-execution.
+- **Multi-Cluster Management** - Flyte separates workflow management from execution,
+allowing you to define workflows once in a central location and run them across multiple
+compute clusters as needed.
     - (Put image from LinkedIn Engineering blog [Figure 8: Flyte multi-region routing
     setup])
-- Automatic Recovery
-    - When servers fail or need maintenance, Flyte automatically moves tasks to working
-    machines. Tasks can resume from where they left off instead of starting over,
-    minimizing lost work.
-- Connect External Services
-    - Flyte can run tasks on popular data platforms like Databricks, Snowflake, and AWS
-    Batch while still providing centralized workflow management, monitoring, and error
-    handling.
+- **Automatic Recovery** - When servers fail or need maintenance, Flyte automatically
+moves tasks to working machines. Tasks can resume from where they left off instead of
+starting over, minimizing lost work.
+- **Connect External Services** - Flyte can run tasks on popular data platforms like
+Databricks, Snowflake, and AWS Batch while still providing centralized workflow
+management, monitoring, and error handling.
 
 
 ## How to Run Workflow in Flyte?
