@@ -60,7 +60,21 @@ covering each topic will be published in future articles.
 The Flyte workflow can be defined through simple Python syntax that is similar to other
 workflow orchastration tools.
 
-(Put the code/screenshot here)
+```python
+import flytekit as fl
+
+
+@fl.task
+def say_hello(name: str) -> str:
+    return f"Hello, {name}!"
+
+
+@fl.workflow
+def wf(name: str = "world") -> str:
+    greeting = say_hello(name=name)
+    return greeting
+```
+
 
 After defining the workflow, we can either executing it locally by `pyflyte run task.py
 wf` for debugging locally or running on remote with `pyflyte run --remote task.py wf`.
@@ -70,7 +84,14 @@ provides real-time status updates.
 The command prints a URL to access Flyte Console, a web dashboard for monitoring workflow
 progress, viewing logs, and managing operations like retries.
 
-(Put the Flyte console image here)
+```sh
+❯ pyflyte run --remote hello_world.py wf
+Running Execution on Remote.
+
+[✔] Go to http://localhost:30080/console/projects/flytesnacks/domains/development/executions/a465495htfhprw5fhp2w to see execution in the console.
+```
+
+![flyte console](../img/flyte-console.png)
 
 
 ## References
