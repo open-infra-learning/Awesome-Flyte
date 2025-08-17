@@ -3,7 +3,7 @@
 
 Since the term *big data* first introduced in the early 1990s, the volume of global data has grown at an exponential pace. As machine learning continues to rise, companies are building countless AI pipelines to solve real-world business problems, from predicting ad clicks to personalizing recommendations.
 
-| ![data growth](../img/data-growth.png) |
+| <img src="../img/data-growth.png" width="500"> |
 |:--:|
 | Figure 1. The exponential growth of global data [1]. |
 
@@ -90,8 +90,9 @@ Running Execution on Remote.
 
 [✔] Go to http://localhost:30080/console/projects/flytesnacks/domains/development/executions/a465495htfhprw5fhp2w to see execution in the console.
 ```
-
-![flyte console](../img/flyte-console.png)
+| <img src="../img/flyte-console.png" width="500"> |
+|:--:|
+| Figure 2. Flyte Console [1]. |
 
 
 ## References
