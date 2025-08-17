@@ -1,4 +1,4 @@
-# Introduction to Flyte
+# From Chaos to Scale: Orchestrating AI Pipelines with Flyte
 
 
 Since the term *big data* first introduced in the early 1990s, the volume of global data has grown at an exponential pace. As machine learning continues to rise, companies are building countless AI pipelines to solve real-world business problems, from predicting ad clicks to personalizing recommendations.
@@ -51,7 +51,7 @@ Databricks, Snowflake, and AWS Batch while still providing centralized workflow
 management, monitoring, and error handling.
 
 
-## How to Run Workflow in Flyte?
+## How to Run a Workflow in Flyte?
 
 The Flyte workflow can be defined through simple Python syntax that is similar to other
 workflow orchastration tools.
