@@ -29,24 +29,6 @@ Today, Flyte is trusted by leading companies such as Tesla, Spotify, LinkedIn, a
 [2] https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem
 
 
-## How to Run Workflow in Flyte?
-
-> 我們可能需要一個快速的 overview 說 Flyte 怎麼用? 還不確定要放哪
-
-The most basic use case of Flyte is to create the workflow (a DAG) containing multiple
-tasks with simple Python syntax (see below). Then we can run the workflow in cluster Pod
-with `pyflyte run --remote task.py wf`. You can then see the pod is created for executing
-tasks, and status is updated to the Flyte console, which is the dashboard. How simple it
-is!
-
-(Put the code/screenshot here)
-
-By running the workflow, we can access the Flyte console with the URL printed in the
-terminal. Flyte console is an UI interface for monitoring the workflow status, loggings,
-and do other operations like retrying.
-
-(Put the Flyte console image here)
-
 ## Flyte Features 
 
 This section highlights key Flyte features with brief overviews. Detailed articles
@@ -73,3 +55,22 @@ covering each topic will be published in future articles.
     - Flyte can run tasks on popular data platforms like Databricks, Snowflake, and AWS
     Batch while still providing centralized workflow management, monitoring, and error
     handling.
+
+
+## How to Run Workflow in Flyte?
+
+> 我們可能需要一個快速的 overview 說 Flyte 怎麼用? 還不確定要放哪
+
+The most basic use case of Flyte is to create the workflow (a DAG) containing multiple
+tasks with simple Python syntax (see below). Then we can run the workflow in cluster Pod
+with `pyflyte run --remote task.py wf`. You can then see the pod is created for executing
+tasks, and status is updated to the Flyte console, which is the dashboard. How simple it
+is!
+
+(Put the code/screenshot here)
+
+By running the workflow, we can access the Flyte console with the URL printed in the
+terminal. Flyte console is an UI interface for monitoring the workflow status, loggings,
+and do other operations like retrying.
+
+(Put the Flyte console image here)
