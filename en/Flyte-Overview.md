@@ -9,20 +9,20 @@ $$
 \text{AI Pipeline = Code + Data [1]}
 $$
 
-But in practice, building and managing these pipelines is far from simple. Developers often face two major challenges:
+But in practice, building and managing these pipelines is far from simple. Developers often face two major problems:
 
-1. **Data flow.** Ensure data moves smoothly across a complex workflow of preprocessing, model training, serving, and evaluation.
-2. **Deployment.** Ship code reliably into production without endless manual fixes.
+1. **Multi-cluster deployment** - Reliably ship code to production at scale, without endless manual fixes
+2. **Data flow** - Ensure data moves smoothly across a complex workflow of preprocessing, model training, serving, and evaluation
 
 To address these pain points, Lyft created Flyte [2], an open-source orchestration platform designed to support tens of thousands of AI pipelines at scale.
 
 Flyte tackles five specific challenges that AI teams commonly face:
 
-1. Reusability: Reuse components across pipelines and business units, avoiding “reinventing the wheel."
-2. Reproducibility: Ensure experiments can be replicated by mirroring dev environments in production.
-3. Scalability: Handle massive growth in requests and data with efficient concurrency.
-4. Maintainability: Operate and update thousands of pipelines with ease.
-5. Extensibility: Integrate smoothly with third-party tools and services.
+1. **Scalability** - Handle massive growth in requests and data with efficient concurrency
+2. **Reusability** - Reuse components across pipelines and business units, avoiding “reinventing the wheel."
+3. **Reproducibility** - Ensure experiments can be replicated by mirroring dev environments in production
+4. **Maintainability** - Operate and update thousands of pipelines with ease
+5. **Extensibility** - Integrate smoothly with third-party tools and services
 
 Today, Flyte is trusted by leading companies such as Tesla, Spotify, LinkedIn, and Toyota, and runs over 30 million tasks per day. For example, in a recent LinkedIn Engineering blog [3], the team unveiled their next-generation AI pipelines powered by Flyte, achieving 20–30× faster training and launch times, while enabling them to train models 200× larger than before.
 
