@@ -1,22 +1,33 @@
 # Introduction to Flyte
 
-- What is Flyte? -> quick summary
-- What problem does Flyte solve?
-- Some highlight
 
-Flyte is a workflow orchestration platform built for running tasks at massive scale. It is
-designed for large-scale clusters, delivering high concurrency, scalability, and
-maintainability for production-grade workflows.
+[Background] Since the term *big data* first introduced in the early 1990s, the volume of global data has grown at an exponential pace. As machine learning continues to rise, companies are building countless AI pipelines to solve real-world business problems, from predicting ad clicks to personalizing recommendations.
 
-Originally developed by Lyft, Flyte is trusted by leading companies like Tesla, Spotify,
-LinkedIn, and Toyota, running over 30 million tasks per day on the platform.
-In a recent LinkedIn Engineering blog, the team unveiled their next-generation AI
-pipelines powered by Flyte, enabling 20–30× faster training and launch times, and the
-ability to train models 200× larger^1.
+[Formulation] At its core, an AI pipeline can be thought of as:
 
+AI Pipeline = Code + Data [1]
 
+[Challenges] But in practice, building and managing these pipelines is far from simple. Developers often face two major challenges:
 
-[1] https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem
+1. **Data flow.** Ensure data moves smoothly across a complex workflow of preprocessing, model training, serving, and evaluation.
+2. **Deployment.** Ship code reliably into production without endless manual fixes.
+
+[Solution] To address these pain points, Lyft created Flyte [2], an open-source orchestration platform designed to support tens of thousands of AI pipelines at scale.
+
+Flyte tackles five specific challenges that AI teams commonly face:
+
+1. Reusability: Reuse components across pipelines and business units, avoiding “reinventing the wheel."
+2. Reproducibility: Ensure experiments can be replicated by mirroring dev environments in production.
+3. Scalability: Handle massive growth in requests and data with efficient concurrency.
+4. Maintainability: Operate and update thousands of pipelines with ease.
+5. Extensibility: Integrate smoothly with third-party tools and services.
+
+Today, Flyte is trusted by leading companies such as Tesla, Spotify, LinkedIn, and Toyota, and runs over 30 million tasks per day. For example, in a recent LinkedIn Engineering blog [3], the team unveiled their next-generation AI pipelines powered by Flyte, achieving 20–30× faster training and launch times, while enabling them to train models 200× larger than before.
+
+[1] Andrew Ng’s MLOps
+[2] Flyte docs
+[2] https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem
+
 
 ## How to Run Workflow in Flyte?
 
@@ -35,15 +46,6 @@ terminal. Flyte console is an UI interface for monitoring the workflow status, l
 and do other operations like retrying.
 
 (Put the Flyte console image here)
-
-## Challenges in Previous ML Orchestration Platforms
-
-> Reference here: https://eng.lyft.com/introducing-flyte-cloud-native-machine-learning-and-data-processing-platform-fb2bb3046a59
-
-- Skip for now and try to finish following first :P
-
-- List things out in bullet point with simple description
-
 
 ## Flyte Features 
 
