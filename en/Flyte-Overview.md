@@ -3,10 +3,14 @@
 
 Since the term *big data* first introduced in the early 1990s, the volume of global data has grown at an exponential pace. As machine learning continues to rise, companies are building countless AI pipelines to solve real-world business problems, from predicting ad clicks to personalizing recommendations.
 
+| ![data growth](../img/data-growth.png) |
+|:--:|
+| Figure 1. The exponential growth of global data [1]. |
+
 At its core, an AI pipeline can be thought of as:
 
 $$
-\text{AI Pipeline = Code + Data [1]}
+\text{AI Pipeline = Code + Data [2]}
 $$
 
 But in practice, building and managing these pipelines is far from simple. Developers often face two major problems:
@@ -14,7 +18,7 @@ But in practice, building and managing these pipelines is far from simple. Devel
 1. **Multi-cluster deployment** - Reliably ship code to production at scale, without endless manual fixes
 2. **Data flow** - Ensure data moves smoothly across a complex workflow of preprocessing, model training, serving, and evaluation
 
-To address these pain points, Lyft created Flyte [2], an open-source orchestration platform designed to support tens of thousands of AI pipelines at scale.
+To address these pain points, Lyft created Flyte [3], an open-source orchestration platform designed to support tens of thousands of AI pipelines at scale.
 
 Flyte tackles five specific challenges that AI teams commonly face:
 
@@ -24,7 +28,7 @@ Flyte tackles five specific challenges that AI teams commonly face:
 4. **Maintainability** - Operate and update thousands of pipelines with ease
 5. **Extensibility** - Integrate smoothly with third-party tools and services
 
-Today, Flyte is trusted by leading companies such as Tesla, Spotify, LinkedIn, and Toyota, and runs over 30 million tasks per day. For example, in a recent LinkedIn Engineering blog [3], the team unveiled their next-generation AI pipelines powered by Flyte, achieving 20–30× faster training and launch times, while enabling them to train models 200× larger than before.
+Today, Flyte is trusted by leading companies such as Tesla, Spotify, LinkedIn, and Toyota, and runs over 30 million tasks per day. For example, in a recent LinkedIn Engineering blog [4], the team unveiled their next-generation AI pipelines powered by Flyte, achieving 20–30× faster training and launch times, while enabling them to train models 200× larger than before.
 
 
 ## Flyte Features 
@@ -91,7 +95,8 @@ Running Execution on Remote.
 
 
 ## References
-[1] [A Chat with Andrew on MLOps: From Model-centric to Data-centric AI](https://www.youtube.com/watch?v=06-AZXmwHjo) <br>
-[2] [Flyte OSS](https://www.union.ai/docs/v1/flyte/user-guide/) <br>
-[3] [OpenConnect: LinkedIn’s next-generation AI pipeline ecosystem](https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem) <br>
-[4] [On Orchestrators: You Are All Right, But You Are All Wrong Too](https://dlthub.com/blog/on-orchestrators) <br>
+[1] [Amount of Data Created Daily (2025)](https://explodingtopics.com/blog/data-generated-per-day) <br>
+[2] [A Chat with Andrew on MLOps: From Model-centric to Data-centric AI](https://www.youtube.com/watch?v=06-AZXmwHjo) <br>
+[3] [Flyte OSS](https://www.union.ai/docs/v1/flyte/user-guide/) <br>
+[4] [OpenConnect: LinkedIn’s next-generation AI pipeline ecosystem](https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem) <br>
+[5] [On Orchestrators: You Are All Right, But You Are All Wrong Too](https://dlthub.com/blog/on-orchestrators) <br>
