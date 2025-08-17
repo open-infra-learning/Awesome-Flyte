@@ -24,10 +24,6 @@ Flyte tackles five specific challenges that AI teams commonly face:
 
 Today, Flyte is trusted by leading companies such as Tesla, Spotify, LinkedIn, and Toyota, and runs over 30 million tasks per day. For example, in a recent LinkedIn Engineering blog [3], the team unveiled their next-generation AI pipelines powered by Flyte, achieving 20–30× faster training and launch times, while enabling them to train models 200× larger than before.
 
-[1] Andrew Ng’s MLOps
-[2] Flyte docs
-[2] https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem
-
 
 ## Flyte Features 
 
@@ -74,3 +70,9 @@ terminal. Flyte console is an UI interface for monitoring the workflow status, l
 and do other operations like retrying.
 
 (Put the Flyte console image here)
+
+
+## References
+[1] [A Chat with Andrew on MLOps: From Model-centric to Data-centric AI](https://www.youtube.com/watch?v=06-AZXmwHjo) <br>
+[2] [Flyte OSS](https://www.union.ai/docs/v1/flyte/user-guide/) <br>
+[3] [OpenConnect: LinkedIn’s next-generation AI pipeline ecosystem](https://www.linkedin.com/blog/engineering/infrastructure/openconnect-linkedins-next-generation-ai-pipeline-ecosystem) <br>
